@@ -120,10 +120,9 @@ cmc-ai-data-platform
 └── README.md
 ```
 
----
 
 ## 📊 Data Sources
-
+```
 This project simulates typical CMC datasets used in biopharmaceutical manufacturing.
 
 ### **1. Manufacturing Batch Data (MES)**
@@ -186,7 +185,7 @@ Examples:
 - pH variability  
 - Reaction duration  
 - Sensor drift indicators  
-
+```
 These features enable predictive modeling of critical quality attributes (CQAs).
 
 🤖 Machine Learning Models
