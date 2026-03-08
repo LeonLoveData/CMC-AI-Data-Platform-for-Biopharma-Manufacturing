@@ -1,0 +1,235 @@
+CMC AI DATA PLATFORM – TECHNICAL GUIDELINES
+===========================================
+
+This document defines the data, modeling, and governance standards for building
+AI‑ready CMC (Chemistry, Manufacturing and Controls) data products to support
+predictive quality, batch intelligence, and process optimization in
+biopharmaceutical manufacturing.
+
+----------------------------------------------------------------------
+1. CMC DATA GOVERNANCE PRINCIPLES
+----------------------------------------------------------------------
+
+All CMC data products must follow the core principles of:
+
+• Data integrity (ALCOA+)
+  - Attributable
+  - Legible
+  - Contemporaneous
+  - Original
+  - Accurate
+  - Complete, Consistent, Enduring, Available
+
+• GxP compliance for manufacturing and analytical data
+
+• Traceability across:
+  - Batch → Analytical results → Stability → Sensor data
+  - Raw → Processed → Feature → Model input → Predictions
+
+• Version control for:
+  - Raw data
+  - Processed datasets
+  - Feature sets
+  - ML models
+  - Dashboards and LLM knowledge sources
+
+----------------------------------------------------------------------
+2. AI‑READY DATA REQUIREMENTS
+----------------------------------------------------------------------
+
+To support predictive analytics, all CMC datasets must be transformed into
+standardized, machine‑learning‑ready formats.
+
+AI‑ready data must include:
+
+• Cleaned and validated numerical fields
+• Standardized units (temperature, pressure, pH, time)
+• Harmonized batch identifiers across systems
+• Timestamps normalized to ISO 8601
+• Missing value handling rules
+• Outlier detection and annotation
+• Metadata describing:
+  - Source system (MES, LIMS, PAT, ELN)
+  - Data owner
+  - Data lineage
+  - Transformation steps
+
+----------------------------------------------------------------------
+3. UNIFIED CMC DATA MODEL
+----------------------------------------------------------------------
+
+The platform uses a unified data model with four primary domains:
+
+1. Manufacturing Batch Data (MES)
+   - Batch_ID
+   - Reactor_Temp, pH, Pressure
+   - Reaction_Time, Agitation_Speed
+   - Yield, Batch_Status
+
+2. Analytical Data (LIMS – HPLC)
+   - Batch_ID
+   - Retention_Time
+   - Impurity_A, Impurity_B
+   - Purity, Total_Impurity
+
+3. Stability Data
+   - Batch_ID
+   - Storage_Temp
+   - Time_Month
+   - Potency, Degradation
+
+4. PAT Sensor Time-Series
+   - timestamp
+   - Batch_ID
+   - Temperature, Pressure, pH
+   - Dissolved_Oxygen
+
+All datasets must support batch-level merging.
+
+----------------------------------------------------------------------
+4. FEATURE ENGINEERING STANDARDS
+----------------------------------------------------------------------
+
+Feature engineering must follow reproducible, deterministic rules.
+
+Examples:
+
+• Process features
+  - Mean/Max Temperature
+  - Pressure variability
+  - pH drift
+  - Reaction duration
+  - Sensor drift indicators
+
+• Analytical features
+  - Total impurity
+  - Purity
+  - Impurity ratios
+
+• Stability features
+  - Potency decay rate
+  - Temperature sensitivity
+
+• Time-series features
+  - Rolling mean
+  - Rolling standard deviation
+  - First derivative (rate of change)
+
+All feature functions must be:
+
+• Versioned
+• Documented
+• Deterministic
+• Reproducible across environments
+
+----------------------------------------------------------------------
+5. MACHINE LEARNING MODELING GUIDELINES
+----------------------------------------------------------------------
+
+Supported model categories:
+
+1. Quality Prediction (CQAs)
+   - Regression models (XGBoost, Random Forest)
+   - Metrics: R², RMSE
+
+2. Batch Failure Prediction
+   - Classification models (Logistic Regression, Gradient Boosting)
+   - Metrics: Accuracy, Precision/Recall, ROC-AUC
+
+3. Process Anomaly Detection
+   - Unsupervised models (Isolation Forest)
+   - Metrics: anomaly rate, false positive rate
+
+Model requirements:
+
+• Train/validation/test split must be batch‑aware
+• No leakage from future batches
+• All models must log:
+  - Hyperparameters
+  - Training data version
+  - Feature set version
+  - Performance metrics
+• Models must be reproducible and explainable
+
+----------------------------------------------------------------------
+6. AI‑READY DATA PRODUCTS
+----------------------------------------------------------------------
+
+The platform produces standardized data products:
+
+• batch_dataset.parquet
+• analytical_dataset.parquet
+• stability_dataset.parquet
+• sensor_features.parquet
+• model_input_dataset.parquet
+
+Each data product must include:
+
+• Schema definition
+• Data dictionary
+• Lineage metadata
+• Version number
+
+----------------------------------------------------------------------
+7. LLM KNOWLEDGE ASSISTANT GUIDELINES
+----------------------------------------------------------------------
+
+The CMC RAG assistant must:
+
+• Use only approved domain knowledge sources:
+  - ICH Q8 Pharmaceutical Development
+  - ICH Q9 Quality Risk Management
+  - ICH Q10 Pharmaceutical Quality System
+  - FDA CMC guidance documents
+  - Internal SOPs (if applicable)
+
+• Provide:
+  - Technical explanations
+  - Regulatory interpretations
+  - Manufacturing best practices
+
+• Avoid:
+  - Providing regulatory advice beyond public guidance
+  - Generating unverified scientific claims
+
+• All retrieved documents must be:
+  - Indexed
+  - Versioned
+  - Traceable
+
+----------------------------------------------------------------------
+8. DASHBOARD & ANALYTICS GUIDELINES
+----------------------------------------------------------------------
+
+Dashboards must support:
+
+• Yield distribution visualization
+• Impurity prediction results
+• Batch failure risk scoring
+• Process trend monitoring
+• Anomaly detection alerts
+
+All visualizations must include:
+
+• Data source version
+• Timestamp of last refresh
+• Model version (if applicable)
+
+----------------------------------------------------------------------
+9. SECURITY & ACCESS CONTROL
+----------------------------------------------------------------------
+
+• Raw CMC data must be access‑controlled
+• Processed datasets must follow least‑privilege access
+• LLM knowledge sources must not include confidential IP unless authorized
+• All data transfers must be logged
+
+----------------------------------------------------------------------
+10. SUMMARY
+----------------------------------------------------------------------
+
+These guidelines define the standards for building a modern, AI‑ready CMC data
+platform that integrates manufacturing, analytical, stability, and sensor data
+to support predictive quality, batch intelligence, and advanced manufacturing
+analytics in biopharmaceutical production.
+
