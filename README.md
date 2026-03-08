@@ -225,10 +225,11 @@ Designed for:
 
 🧠 CMC Knowledge Assistant (LLM)
 A Retrieval‑Augmented Generation (RAG) assistant that answers CMC questions using:
-- ICH Q8 – Pharmaceutical Development
-- ICH Q9 – Quality Risk Management
-- ICH Q10 – Pharmaceutical Quality System
-- FDA CMC guidance
+- ISA-88,95
+- CDISC
+- eCTD
+- ALCOA+
+- 21 CFR Part 11
 
 
 📊 Manufacturing Analytics Dashboard
