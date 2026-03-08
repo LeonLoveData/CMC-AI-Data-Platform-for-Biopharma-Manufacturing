@@ -192,112 +192,70 @@ These features enable predictive modeling of critical quality attributes (CQAs).
 🤖 Machine Learning Models
 1. Quality Prediction (CQAs)
 Predict:
-
-Purity
-
-Total impurity
-
-Yield
+- Purity
+- Total impurity
+- Yield
 
 Models:
-
-XGBoost
-
-Random Forest
+- XGBoost
+- Random Forest
 
 2. Batch Failure Prediction
 Binary classification: Pass vs Fail.
 
 Models:
+- Logistic Regression
+- Gradient Boosting
 
-Logistic Regression
-
-Gradient Boosting
-
-Performance:
-
-Model	Accuracy
-Batch Failure Model	0.89
 3. Process Anomaly Detection
 Algorithm:
-
-Isolation Forest
+- Isolation Forest
 
 Used for early detection of process drift.
 
 📦 AI‑Ready Data Products
 Outputs include:
-
-batch_dataset.parquet
-
-analytical_dataset.parquet
-
-sensor_features.parquet
+- batch_dataset.parquet
+- analytical_dataset.parquet
+- sensor_features.parquet
 
 Designed for:
-
-ML model training
-
-Predictive manufacturing analytics
-
-Quality monitoring
+- ML model training
+- Predictive manufacturing analytics
+- Quality monitoring
 
 🧠 CMC Knowledge Assistant (LLM)
 A Retrieval‑Augmented Generation (RAG) assistant that answers CMC questions using:
-
-ICH Q8 – Pharmaceutical Development
-
-ICH Q9 – Quality Risk Management
-
-ICH Q10 – Pharmaceutical Quality System
-
-FDA CMC guidance
+- ICH Q8 – Pharmaceutical Development
+- ICH Q9 – Quality Risk Management
+- ICH Q10 – Pharmaceutical Quality System
+- FDA CMC guidance
 
 
 📊 Manufacturing Analytics Dashboard
 A Streamlit dashboard provides:
-
-Batch yield distribution
-
-Impurity prediction
-
-Process trend monitoring
-
-Anomaly detection alerts
+- Batch yield distribution
+- Impurity prediction
+- Process trend monitoring
+- Anomaly detection alerts
 
 🛠️ Technologies Used
-Programming
-Python
-
-Data Processing
-Pandas
-
-NumPy
-
-Machine Learning
-Scikit‑learn
-
-XGBoost
-
-Visualization
-Streamlit
-
-Matplotlib
-
-LLM / Generative AI
-LangChain
-
-Retrieval‑Augmented Generation (RAG)
+- Python
+- Pandas
+- NumPy
+- Scikit‑learn
+- XGBoost
+- Streamlit
+- Matplotlib
+- LLM / Generative AI
+- LangChain
+- Retrieval‑Augmented Generation (RAG)
 
 📌 Summary
 This project demonstrates how to build an AI‑ready CMC data platform that unifies manufacturing, analytical, and sensor data to enable:
-
-Predictive quality
-
-Batch intelligence
-
-Process monitoring
-
-LLM‑powered CMC insights
+- Predictive quality
+- Batch intelligence
+- Process monitoring
+- LLM‑powered CMC insights
 
 It simulates a realistic biopharma manufacturing analytics workflow and showcases how modern data engineering and AI can transform CMC operations.
