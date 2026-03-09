@@ -258,4 +258,15 @@ This project demonstrates how to build an AI‑ready CMC data platform that unif
 - Process monitoring
 - LLM‑powered CMC insights
 
+  ## 📊 Example Output:
+
+### Batch Status  
+![Batch status](outputs/batch_status.png)
+
+### Pressure vs Yield  
+![Pressure vs_yield](outputs/pressure_vs_yield.png)
+
+### Yield distribution  
+![Yield distribution](outputs/yield_distribution.png)
+
 It simulates a realistic biopharma manufacturing analytics workflow and showcases how modern data engineering and AI can transform CMC operations.
