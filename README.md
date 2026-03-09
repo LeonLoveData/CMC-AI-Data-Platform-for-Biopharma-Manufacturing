@@ -40,8 +40,8 @@ This project focuses on building AI‑ready data products for pharmaceutical man
   - Quality prediction (CQAs)
   - Batch failure prediction
   - Process anomaly detection
-- Develop an interactive **manufacturing analytics dashboard**
-- Implement an **LLM‑powered CMC knowledge assistant** using RAG
+- Develop an interactive manufacturing analytics dashboard
+- Implement an LLM‑powered CMC knowledge assistant using RAG
 
 ---
 
