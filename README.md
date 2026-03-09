@@ -263,6 +263,7 @@ This project demonstrates how to build an AI‑ready CMC data platform that unif
 ### Batch Status  
 ![Batch status](outputs/batch_status.png)
 
+
 ### Pressure vs Yield  
 ![Pressure vs_yield](outputs/pressure_vs_yield.png)
 
