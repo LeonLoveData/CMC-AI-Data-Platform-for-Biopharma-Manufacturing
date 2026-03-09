@@ -21,7 +21,7 @@ Because these datasets are heterogeneous and siloed, it is difficult to build AI
 - Yield optimization  
 - Real‑time manufacturing insights  
 
-This project demonstrates how to build an **AI‑ready CMC data platform** that unifies manufacturing, analytical, and sensor data into standardized data products for advanced analytics and machine learning.
+This project demonstrates how to build an AI‑ready CMC data platform** that unifies manufacturing, analytical, and sensor data into standardized data products for advanced analytics and machine learning.
 
 The goal is to simulate a real‑world pharmaceutical CMC data science workflow and show how modern data engineering + ML + LLMs can enable next‑generation biomanufacturing intelligence.
 
@@ -29,12 +29,12 @@ The goal is to simulate a real‑world pharmaceutical CMC data science workflow 
 
 ## 🎯 Key Objectives
 
-This project focuses on building **AI‑ready data products** for pharmaceutical manufacturing analytics.
+This project focuses on building AI‑ready data products for pharmaceutical manufacturing analytics.
 
 ### Core objectives:
 
 - Integrate heterogeneous CMC datasets (MES, LIMS, PAT, ELN)
-- Build a **unified CMC data model**
+- Build a unified CMC data model
 - Engineer features from process, analytical, and stability data
 - Train ML models for:
   - Quality prediction (CQAs)
@@ -71,7 +71,7 @@ AI‑Ready Data Products
 Dashboard + LLM Knowledge Assistant
 
 ```
-This architecture demonstrates how **data engineering**, **machine learning**, and **generative AI** work together to enable modern CMC analytics.
+This architecture demonstrates how data engineering, machine learning, and generative AI work together to enable modern CMC analytics.
 
 ---
 
